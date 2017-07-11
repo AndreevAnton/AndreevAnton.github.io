@@ -1,0 +1,5 @@
+body { width: 100%; font-weight: 300; line-height: 1.42857; color: rgb(127, 140, 141); padding: 0px; margin: 0px; }
+.fb-send-to-messenger { z-index: 10; }
+.box { width: 100%; overflow: hidden; }
+.fb-loader { position: absolute; left: 134px; top: 9px; z-index: 1; opacity: 0; }
+.vk-button { z-index: 10; position: relative; }
