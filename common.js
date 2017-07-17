@@ -357,6 +357,26 @@ $(function() {
                 'referer_hide': $('#referer_hide').val(),
                 'referer': $('#referer').val()
             };
+			var xmlhttp = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+			xmlhttp.open('POST', 'https://mandrillapp.com/api/1.0/messages/send.json');
+			xmlhttp.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+			xmlhttp.onreadystatechange = function() {
+				if (xmlhttp.readyState == 4) {
+					if(xmlhttp.status == 200) alert('Mail sended!')
+					else if(xmlhttp.status == 500) alert('Check apikey')
+					else alert('Request error');
+				}
+			}
+			xmlhttp.send(JSON.stringify({'key': 'qNS23uABRN96Mh2L56FYwA',
+			   'message': {
+				   'from_email': postForm.email,
+				   'to': [{'email': 'anton.andreev@aiesec.net', 'type': 'to'}],
+				   'autotext': 'true',
+				   'subject': 'Yeah!',
+				   'html': postForm.name + '<br>' + postForm.phone + '<br>' + postForm.email  + '<br>' + postForm.message
+				}}));
+			
+			/*
             $.ajax({
                 type: 'POST',
                 url: 'feedback.php',
@@ -377,7 +397,7 @@ $(function() {
                             'display', 'block')
                     }
                 }
-            })
+            })*/
         }
         event.preventDefault()
     })
@@ -424,7 +444,7 @@ $(function() {
                 'cookie': $('#cookie').val(),
                 'cookie_hide': $('#cookie_hide').val()
             };
-            $.ajax({
+            /*$.ajax({
                 type: 'POST',
                 url: 'feedback.php',
                 data: postForm,
@@ -451,7 +471,26 @@ $(function() {
                     $('.final_error').css('display',
                         'block')
                 }
-            })
+            })*/
+			
+			var xmlhttp = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+				xmlhttp.open('POST', 'https://mandrillapp.com/api/1.0/messages/send.json');
+				xmlhttp.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+				xmlhttp.onreadystatechange = function() {
+					if (xmlhttp.readyState == 4) {
+						if(xmlhttp.status == 200) alert('Mail sended!')
+						else if(xmlhttp.status == 500) alert('Check apikey')
+						else alert('Request error');
+					}
+				}
+				xmlhttp.send(JSON.stringify({'key': 'qNS23uABRN96Mh2L56FYwA',
+				   'message': {
+					   'from_email': postForm.email,
+					   'to': [{'email': 'anton.andreev@aiesec.net', 'type': 'to'}],
+					   'autotext': 'true',
+					   'subject': 'Yeah!',
+					   'html': postForm.name + '<br>' + postForm.phone + '<br>' + postForm.email  + '<br>' + postForm.message
+					}}));
         }
         event.preventDefault()
     });
