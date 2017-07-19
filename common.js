@@ -358,17 +358,22 @@ $(function() {
                 'referer': $('#referer').val()
             };
 			
-			var m = new mandrill.Mandrill('qNS23uABRN96Mh2L56FYwA'); // This will be public
-
-			m.messages.send({
-				'message': {
+			$.ajax({
+				type: "POST",
+				url: "https://mandrillapp.com/api/1.0/messages/send.json",
+				data: {
+				  'key': 'qNS23uABRN96Mh2L56FYwA',
+				  'message': {
 				   'from_email': postForm.email,
 				   'to': [{'email': 'manager@armyconsult.ru', 'type': 'to'}],
 				   'autotext': 'true',
 				   'subject': 'Yeah!',
 				   'html': postForm.name + '<br>' + postForm.phone + '<br>' + postForm.email  + '<br>' + postForm.message
+					}
 				}
-			});
+			  }).done(function(response) {
+				console.log(response);
+			  });
 			/*
             $.ajax({
                 type: 'POST',
@@ -465,17 +470,24 @@ $(function() {
                         'block')
                 }
             })*/
-			var m = new mandrill.Mandrill('qNS23uABRN96Mh2L56FYwA'); // This will be public
-
-			m.messages.send({
-				'message': {
+			
+			$.ajax({
+				type: "POST",
+				url: "https://mandrillapp.com/api/1.0/messages/send.json",
+				data: {
+				  'key': 'qNS23uABRN96Mh2L56FYwA',
+				  'message': {
 				   'from_email': postForm.email,
 				   'to': [{'email': 'manager@armyconsult.ru', 'type': 'to'}],
 				   'autotext': 'true',
 				   'subject': 'Yeah!',
 				   'html': postForm.name + '<br>' + postForm.phone + '<br>' + postForm.email  + '<br>' + postForm.message
+					}
 				}
-			});
+			  }).done(function(response) {
+				console.log(response);
+			  });
+			
         }
         event.preventDefault()
     });
