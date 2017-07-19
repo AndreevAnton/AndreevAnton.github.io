@@ -350,7 +350,7 @@ $(function() {
             var postForm = {
                 'name': $('#name').val(),
                 'phone': $('#phone').val(),
-                'email': $('#email').val(),
+                'email': $('#email_hide').val(),
                 'message': $('#message').val(),
                 'cookie': $('#cookie').val(),
                 'cookie_hide': $('#cookie_hide').val(),
@@ -364,7 +364,7 @@ $(function() {
 				data: {
 				  'key': 'qNS23uABRN96Mh2L56FYwA',
 				  'message': {
-				   'from_email': 'manager@armyconsult.ru',
+				   'from_email': postForm.email,
 				   'to': [{'email': 'manager@armyconsult.ru', 'type': 'to'}],
 				   'autotext': 'true',
 				   'subject': 'Yeah!',
@@ -477,7 +477,7 @@ $(function() {
 				data: {
 				  'key': 'qNS23uABRN96Mh2L56FYwA',
 				  'message': {
-				   'from_email': 'manager@armyconsult.ru',
+				   'from_email': postForm.email,
 				   'to': [{'email': 'manager@armyconsult.ru', 'type': 'to'}],
 				   'autotext': 'true',
 				   'subject': 'Yeah!',
