@@ -348,14 +348,10 @@ $(function() {
                 $('#phone_form').addClass("form__row_valid")
             }
             var postForm = {
-                'name': $('#feedback-form #name').val(),
-                'phone': $('#feedback-form #phone').val(),
-                'email': $('#feedback-form input#email_hide').val(),
-                'message': $('#feedback-form #message').val(),
-                'cookie': $('#feedback-form #cookie').val(),
-                'cookie_hide': $('#feedback-form #cookie_hide').val(),
-                'referer_hide': $('#feedback-form #referer_hide').val(),
-                'referer': $('#feedback-form #referer').val()
+				'name': $('#feedback-bottom #name').val(),
+                'phone': $('#feedback-bottom #phone').val(),
+                'email': $('#feedback-bottom #email').val(),
+                'message': $('#feedback-bottom #message').val()
             };
 			
 			$.ajax({
@@ -433,14 +429,10 @@ $(function() {
                     "form__row_valid")
             }
             var postForm = {
-                'name': $('#feedback-bottom #name_hide').val(),
-                'phone': $('#feedback-bottom #phone_hide').val(),
-                'email': $('#feedback-bottom #email_hide').val(),
-                'message': $('#feedback-bottom #message_hide').val(),
-                'referer_hide': $('#feedback-bottom #referer_hide').val(),
-                'referer': $('#feedback-bottom #referer').val(),
-                'cookie': $('#feedback-bottom #cookie').val(),
-                'cookie_hide': $('#feedback-bottom #cookie_hide').val()
+                'name': $('#feedback-form #name_hide').val(),
+                'phone': $('#feedback-form #phone_hide').val(),
+                'email': $('#feedback-form #email_hide').val(),
+                'message': $('#feedback-form #message_hide').val()
             };
             /*$.ajax({
                 type: 'POST',
