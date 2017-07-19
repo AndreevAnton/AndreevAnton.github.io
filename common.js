@@ -369,9 +369,11 @@ $(function() {
 				}
 			  }).done(function(response) {
 				  if(response.status == 'sent') {
-					  $('.form__order-first').html($('.form__order-final.final_hide'));
+					  $('.final_hide').css('display', 'block')
+					  $('.form__order-first').replaceWith($('.form__order-final.final_hide'));
 				  } else {
-					$('.form__order-first').html($('.form__order-final.final_error'));
+					  $('.final_error').css('display', 'block')
+					$('.form__order-first').replaceWith($('.form__order-final.final_error'));
 				  }
 			  });
 			  //form__order-final
