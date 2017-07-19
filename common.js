@@ -360,7 +360,7 @@ $(function() {
 				data: {
 				  'key': 'qNS23uABRN96Mh2L56FYwA',
 				  'message': {
-				   'from_email': postForm.email,
+				   'from_email': 'manager@armyconsult.ru',
 				   'to': [{'email': 'manager@armyconsult.ru', 'type': 'to'}],
 				   'autotext': 'true',
 				   'subject': 'Yeah!',
@@ -368,6 +368,7 @@ $(function() {
 					}
 				}
 			  }).done(function(response) {
+				  console.log(response);
 				  if(response.status == 'sent') {
 					  $('.final_hide').css('display', 'block')
 					  $('.form__order-first').replaceWith($('.form__order-final.final_hide'));
@@ -476,7 +477,7 @@ $(function() {
 				data: {
 				  'key': 'qNS23uABRN96Mh2L56FYwA',
 				  'message': {
-				   'from_email': postForm.email,
+				   'from_email': 'manager@armyconsult.ru',
 				   'to': [{'email': 'manager@armyconsult.ru', 'type': 'to'}],
 				   'autotext': 'true',
 				   'subject': 'Yeah!',
@@ -484,6 +485,7 @@ $(function() {
 					}
 				}
 			  }).done(function(response) {
+				  console.log(response);
 				if(response.status == 'sent') {
 					  $('.first_hide').css('display', 'none');
                       $('.final_hide').css('display', 'block')
