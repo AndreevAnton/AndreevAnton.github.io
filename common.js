@@ -360,7 +360,7 @@ $(function() {
 				data: {
 				  'key': 'qNS23uABRN96Mh2L56FYwA',
 				  'message': {
-				   'from_email': 'manager@armyconsult.ru',
+				   'from_email': postForm.email,
 				   'to': [{'email': 'manager@armyconsult.ru', 'type': 'to'}],
 				   'autotext': 'true',
 				   'subject': 'Yeah!',
@@ -368,8 +368,13 @@ $(function() {
 					}
 				}
 			  }).done(function(response) {
-				console.log(response);
+				  if(response.status == 'sent') {
+					  $('.form__order-first').html($('.form__order-final.final_hide'));
+				  } else {
+					$('.form__order-first').html($('.form__order-final.final_error'));
+				  }
 			  });
+			  //form__order-final
 			/*
             $.ajax({
                 type: 'POST',
@@ -469,7 +474,7 @@ $(function() {
 				data: {
 				  'key': 'qNS23uABRN96Mh2L56FYwA',
 				  'message': {
-				   'from_email': 'manager@armyconsult.ru',
+				   'from_email': postForm.email,
 				   'to': [{'email': 'manager@armyconsult.ru', 'type': 'to'}],
 				   'autotext': 'true',
 				   'subject': 'Yeah!',
@@ -477,7 +482,13 @@ $(function() {
 					}
 				}
 			  }).done(function(response) {
-				console.log(response);
+				if(response.status == 'sent') {
+					  $('.first_hide').css('display', 'none');
+                      $('.final_hide').css('display', 'block')
+				  } else {
+					$('.first_hide').css('display', 'none');
+                    $('.final_error').css('display', 'block')
+				  }
 			  });
 			
         }
