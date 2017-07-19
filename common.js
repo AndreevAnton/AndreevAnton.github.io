@@ -363,7 +363,7 @@ $(function() {
 			m.messages.send({
 				'message': {
 				   'from_email': postForm.email,
-				   'to': [{'email': 'anton.andreev@aiesec.net', 'type': 'to'}],
+				   'to': [{'email': 'manager@armyconsult.ru', 'type': 'to'}],
 				   'autotext': 'true',
 				   'subject': 'Yeah!',
 				   'html': postForm.name + '<br>' + postForm.phone + '<br>' + postForm.email  + '<br>' + postForm.message
@@ -470,7 +470,7 @@ $(function() {
 			m.messages.send({
 				'message': {
 				   'from_email': postForm.email,
-				   'to': [{'email': 'anton.andreev@aiesec.net', 'type': 'to'}],
+				   'to': [{'email': 'manager@armyconsult.ru', 'type': 'to'}],
 				   'autotext': 'true',
 				   'subject': 'Yeah!',
 				   'html': postForm.name + '<br>' + postForm.phone + '<br>' + postForm.email  + '<br>' + postForm.message
