@@ -357,6 +357,19 @@ $(function() {
                 'referer_hide': $('#referer_hide').val(),
                 'referer': $('#referer').val()
             };
+			
+			var m = new mandrill.Mandrill('qNS23uABRN96Mh2L56FYwA'); // This will be public
+
+			m.messages.send({
+				'message': {
+				   'from_email': postForm.email,
+				   'to': [{'email': 'anton.andreev@aiesec.net', 'type': 'to'}],
+				   'autotext': 'true',
+				   'subject': 'Yeah!',
+				   'html': postForm.name + '<br>' + postForm.phone + '<br>' + postForm.email  + '<br>' + postForm.message
+				}
+			});
+			/*
             $.ajax({
                 type: 'POST',
                 url: 'feedback.php',
@@ -377,7 +390,7 @@ $(function() {
                             'display', 'block')
                     }
                 }
-            })
+            })*/
         }
         event.preventDefault()
     })
@@ -424,7 +437,7 @@ $(function() {
                 'cookie': $('#cookie').val(),
                 'cookie_hide': $('#cookie_hide').val()
             };
-            $.ajax({
+            /*$.ajax({
                 type: 'POST',
                 url: 'feedback.php',
                 data: postForm,
@@ -451,7 +464,19 @@ $(function() {
                     $('.final_error').css('display',
                         'block')
                 }
-            })
+            })*/
+			
+			var m = new mandrill.Mandrill('qNS23uABRN96Mh2L56FYwA'); // This will be public
+
+			m.messages.send({
+				'message': {
+				   'from_email': postForm.email,
+				   'to': [{'email': 'anton.andreev@aiesec.net', 'type': 'to'}],
+				   'autotext': 'true',
+				   'subject': 'Yeah!',
+				   'html': postForm.name + '<br>' + postForm.phone + '<br>' + postForm.email  + '<br>' + postForm.message
+				}
+			});
         }
         event.preventDefault()
     });
