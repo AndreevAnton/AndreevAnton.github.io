@@ -368,8 +368,7 @@ $(function() {
 					}
 				}
 			  }).done(function(response) {
-				  console.log(response);
-				  if(response.status == 'sent') {
+				  if(response[0].status == 'sent') {
 					  $('.final_hide').css('display', 'block')
 					  $('.form__order-first').replaceWith($('.form__order-final.final_hide'));
 				  } else {
@@ -485,8 +484,7 @@ $(function() {
 					}
 				}
 			  }).done(function(response) {
-				  console.log(response);
-				if(response.status == 'sent') {
+				if(response[0].status == 'sent') {
 					  $('.first_hide').css('display', 'none');
                       $('.final_hide').css('display', 'block')
 				  } else {
