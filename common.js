@@ -465,7 +465,6 @@ $(function() {
                         'block')
                 }
             })*/
-			
 			var m = new mandrill.Mandrill('qNS23uABRN96Mh2L56FYwA'); // This will be public
 
 			m.messages.send({
