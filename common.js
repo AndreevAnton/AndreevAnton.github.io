@@ -348,14 +348,14 @@ $(function() {
                 $('#phone_form').addClass("form__row_valid")
             }
             var postForm = {
-                'name': $('#name').val(),
-                'phone': $('#phone').val(),
-                'email': $('#email_hide').val(),
-                'message': $('#message').val(),
-                'cookie': $('#cookie').val(),
-                'cookie_hide': $('#cookie_hide').val(),
-                'referer_hide': $('#referer_hide').val(),
-                'referer': $('#referer').val()
+                'name': $('#feedback-form #name').val(),
+                'phone': $('#feedback-form #phone').val(),
+                'email': $('#feedback-form input#email_hide').val(),
+                'message': $('#feedback-form #message').val(),
+                'cookie': $('#feedback-form #cookie').val(),
+                'cookie_hide': $('#feedback-form #cookie_hide').val(),
+                'referer_hide': $('#feedback-form #referer_hide').val(),
+                'referer': $('#feedback-form #referer').val()
             };
 			
 			$.ajax({
@@ -433,14 +433,14 @@ $(function() {
                     "form__row_valid")
             }
             var postForm = {
-                'name': $('#name_hide').val(),
-                'phone': $('#phone_hide').val(),
-                'email': $('#email_hide').val(),
-                'message': $('#message_hide').val(),
-                'referer_hide': $('#referer_hide').val(),
-                'referer': $('#referer').val(),
-                'cookie': $('#cookie').val(),
-                'cookie_hide': $('#cookie_hide').val()
+                'name': $('#feedback-bottom #name_hide').val(),
+                'phone': $('#feedback-bottom #phone_hide').val(),
+                'email': $('#feedback-bottom #email_hide').val(),
+                'message': $('#feedback-bottom #message_hide').val(),
+                'referer_hide': $('#feedback-bottom #referer_hide').val(),
+                'referer': $('#feedback-bottom #referer').val(),
+                'cookie': $('#feedback-bottom #cookie').val(),
+                'cookie_hide': $('#feedback-bottom #cookie_hide').val()
             };
             /*$.ajax({
                 type: 'POST',
