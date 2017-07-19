@@ -364,7 +364,7 @@ $(function() {
 				data: {
 				  'key': 'qNS23uABRN96Mh2L56FYwA',
 				  'message': {
-				   'from_email': postForm.email,
+				   'from_email': 'manager@armyconsult.ru',
 				   'to': [{'email': 'manager@armyconsult.ru', 'type': 'to'}],
 				   'autotext': 'true',
 				   'subject': 'Yeah!',
@@ -477,7 +477,7 @@ $(function() {
 				data: {
 				  'key': 'qNS23uABRN96Mh2L56FYwA',
 				  'message': {
-				   'from_email': postForm.email,
+				   'from_email': 'manager@armyconsult.ru',
 				   'to': [{'email': 'manager@armyconsult.ru', 'type': 'to'}],
 				   'autotext': 'true',
 				   'subject': 'Yeah!',
