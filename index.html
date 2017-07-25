@@ -23,13 +23,11 @@
     	<!-- <script async src="./assets/scripts/jquery.mask.min.js"></script> -->
 		<script defer src="mandrill.min.js"></script>
     	<script defer src="common.js"></script>
-		<script src="https://vk.com/js/api/openapi.js?144"></script>
-    	<script> 
-        VK.Retargeting.Init('VK-RTRG-139612-c52WP');  
-        </script>
+    	
     	
     	          <script src="flipclock.js"></script>
-          </script>
+
+    	</script>
     	<script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = '//vk.com/rtrg?p=VK-RTRG-139612-c52WP';</script>
 	<link media="all" href="index.css" type="text/css" rel="stylesheet">
 </head>
@@ -71,7 +69,7 @@
 				<div class="h__phone">
 					<a href="tel:89823132290" class="h__phone__number roistat-phone" >8 982 313 22 90</a>
 					<span class="free_call">Телефон</span>
-					<a href="#feedback-form"  onclick="formClick();" onclick="VK.Retargeting.Event('click-reg-button')" class="button h__phone__callback js-lb-form-button" onclick="yaCounter45295617.reachGoal('formclick'); return true;">Заказать звонок</a>
+					<a href="#feedback-form"  onclick="VK.Retargeting.Event('formClick')" class="button h__phone__callback js-lb-form-button" onclick="yaCounter45295617.reachGoal('formclick'); return true;">Заказать звонок</a>
 				</div>
 			</div>
 			<div class="prim-nav-wrap">
@@ -1026,7 +1024,7 @@
 						    <input id="referer" name="referer" value=" " type="hidden">
 						</div>
 						<div class="form__row">
-							<input class="button button_submit" onclick="formSend();" onclick="VK.Retargeting.Event('formSend')" onclick="yaCounter45295617.reachGoal('formSend'); return true;" type="submit">
+							<input class="button button_submit" onclick="VK.Retargeting.Event('formSend')" onclick="formSend();" onclick="yaCounter45295617.reachGoal('formsend'); return true;" type="submit">
 						</div>
 						<a href="http://armycons.ru/conf.doc" class="form__order-privacy">Политика конфиденциальности</a>
 					</form>
@@ -1134,7 +1132,7 @@
 						    <input id="referer_hide" name="referer_hide" value=" " type="hidden">
 						</div>
 						<div class="form__row">
-							<input class="button button_submit"  onclick="formSend();" onclick="VK.Retargeting.Event('formSend')" onclick="yaCounter45295617.reachGoal('formSend'); return true;" type="submit">
+							<input class="button button_submit" onclick="VK.Retargeting.Event('formSend')" onclick="formSend();" onclick="yaCounter45295617.reachGoal('formsend'); return true;" type="submit">
 						</div>
 						<a href="http://armycons.ru/conf.doc" class="form__order-privacy">Политика конфиденциальности</a>
 					</form>
@@ -1205,7 +1203,13 @@
 			</div>
 		</div>
 	
+    <!--<script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=6654118201655296"></script>-->
+    
+	
+	<script type="text/javascript" src="openapi_001.js"></script>
 
+<!-- VK Widget -->
+<div id="vk_community_messages"></div>
 	
 
 
@@ -1265,4 +1269,4 @@
 </div>
 
 </body>
-</html>
+</html
